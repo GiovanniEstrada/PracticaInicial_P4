@@ -4,14 +4,16 @@ const mysqlConnection = mysql.createConnection({
     host: "localhost",
     user: 'root',
     password: 'ingenieria',
-    database: 'practicasI'
+    database: 'practicasI',
+    multipleStatements: true
 });
 
 mysqlConnection.connect(function (err){
     if (err){
         console.error(err);
+        return;
     } else {
-        console.log('DataBase is connected')
+        console.log('DataBase is connected');
     }
 });
 
